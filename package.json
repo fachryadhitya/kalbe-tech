@@ -5,20 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "backend": "./node_modules/.bin/json-server-auth ./db.json --port 3001"
+    "start": "next start"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "formik": "^2.2.6",
     "js-cookie": "^2.2.1",
-    "json-server": "^0.16.3",
-    "json-server-auth": "^2.0.2",
     "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "reactstrap": "^8.9.0",
-    "yup": "^0.32.9"
+    "react-dom": "17.0.1"
   }
 }

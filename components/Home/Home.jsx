@@ -9,6 +9,7 @@ export default function ListProduct() {
   const router = useRouter();
   const [data, setData] = useState([]);
   const [criteria, setCriteria] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const ab = async () => {
     const a = await getAllProducts();
@@ -16,7 +17,12 @@ export default function ListProduct() {
   };
 
   const deleteProduct = async (id) => {
-    await deleteProducts(id).then(() => ab());
+    setLoading(true);
+    await deleteProducts(id).then(() => {
+      ab();
+      setLoading(false);
+    });
+    // .then(() => setLoading(false));
   };
 
   const filterData = () => {
@@ -102,6 +108,10 @@ export default function ListProduct() {
             </div>
           ))}
         </div>
+
+        {loading && (
+          <p style={{ textAlign: "center", marginTop: "4rem" }}>Loading</p>
+        )}
       </div>
     </div>
   );

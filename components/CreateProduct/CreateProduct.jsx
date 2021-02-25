@@ -1,16 +1,7 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/no-array-index-key */
-import { Formik, Form } from "formik";
 import { useRouter } from "next/router";
-import * as Yup from "yup";
-import { Col, Row } from "reactstrap";
 import { createProducts, updateProducts } from "../../services/api";
-import { TextInput } from "../hooks/useForm";
 import styles from "../UpdateProduct/Form.module.css";
 import { useState } from "react";
-import axios from "axios";
-import { route } from "next/dist/next-server/server/router";
 
 const CreateProduct = () => {
   const router = useRouter();

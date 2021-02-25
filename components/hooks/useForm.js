@@ -1,5 +1,4 @@
 import { useField } from "formik";
-import dynamic from "next/dynamic";
 
 export const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
